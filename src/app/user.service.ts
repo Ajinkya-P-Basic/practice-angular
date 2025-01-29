@@ -9,11 +9,16 @@ export class UserService {
   constructor() { }
 
   setLoginUserDetails(userDetails: userDetails){
-    localStorage.setItem('userDetails', JSON.stringify(userDetails))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('userDetails', JSON.stringify(userDetails))
+    }
   }
 
   getLoginUserDetails(){
-    return localStorage.getItem('userDetails');
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('userDetails');
+    }
+    return null;
   }
 
 }
