@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-dark: #333333;
+    --color-light: #dddddd;
+    --ti-cursor-color: var(--color-light);
+  }
+  
+  body {
+    font-family: monospace;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+  }
+  
+  .bg-dark {
+    background-color: var(--color-dark) !important;
+  }
+  
+  .clr-light {
+    color: var(--color-light) !important;
+  }
+  
+  .h-100vh {
+    height: 100vh;
+  }
+  
+  .btn-fixed {
+    position: fixed;
+    top: 90%;
+  }
+  
+  .text-danger {
+    color: #ff3838 !important;
+    font-size: small;
+}
