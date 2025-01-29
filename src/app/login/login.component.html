@@ -1,0 +1,29 @@
+<div class="div">
+  <div class="login-card">
+    <h3 class="text-center mb-4">Login</h3>
+    <form [formGroup]="loginForm" autocomplete="off" (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email" formControlName="name"
+          placeholder="Enter your name"
+        />
+        <div *ngIf="submitted && loginForm.get('name')?.errors" class="text-danger">
+          <span>Please Enter your name!</span>
+        </div>
+      </div>
+      
+      <div class="mb-3">
+        <label for="password" class="form-label">Date of Birth</label>
+        <input
+          type="date"
+          class="form-control" formControlName="dob"
+          placeholder="Please select you date of birth"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Login</button>
+    </form>
+  </div>
+</div>
